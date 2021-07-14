@@ -4,10 +4,6 @@ main: la.FarylizerPlugin
 api-version: 1.17
 author: Gamestyler1999
 commands:
-   getlocation:
-      description: Location
-      Usage: /getlocation
-   DeleteBlock:
-      description: Löscht den Block
-      Usage: /DeleteBlock   
- 
+   farylizer:
+      description: Gibt dem Spieler den Farylizer
+     
