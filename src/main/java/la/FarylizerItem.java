@@ -15,6 +15,7 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 public class FarylizerItem extends ItemStack implements Listener {
 
+	private static final int META_NUMER = 123888123;
 	private static final String NAME = ChatColor.GOLD + "§6§k k k §4§s Farylizer §6§k k k ";
 	private Schuss aktuellerSchuss;
 	private Standort aktuellerStandort;
@@ -24,31 +25,23 @@ public class FarylizerItem extends ItemStack implements Listener {
 		super(Material.NETHERITE_PICKAXE);
 		ItemMeta farylizerMeta = super.getItemMeta();
 		farylizerMeta.setDisplayName(NAME);
-		
+		farylizerMeta.setCustomModelData(META_NUMER);
 		super.setItemMeta(farylizerMeta);
-
 		this.aktuellerSchuss = new Schuss();
 		this.aktuellerStandort = new Standort();
 		this.player = player;
-		System.out.println(aktuellerStandort);
 	}
 
 	@EventHandler
 	public void benutzeItem(PlayerInteractEvent event) {
+		player.sendMessage(" §4§s Starte Event ");
 		player.sendMessage(" §5§s Aktion ausgelöst: " + event.getEventName());
-
-//		String blickrichtung = aktuellerSchuss.holeBlickRichtung(player);
-//		if (blickrichtung.equalsIgnoreCase("EAST")) {
-//			getLogger().info("Wir blicken nach osten");
-//		}
 		if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			if (event.getHand() == EquipmentSlot.HAND) {
-				player.sendMessage("if 2 : " + player.getEquipment().getItemInMainHand().getItemMeta().getDisplayName());
-				if (player.getEquipment().getItemInMainHand() instanceof FarylizerItem) {
-					player.sendMessage("if 3 ");
+				if (player.getEquipment().getItemInMainHand().getItemMeta().hasCustomModelData() && player.getEquipment().getItemInMainHand().getItemMeta().getCustomModelData() == META_NUMER) {
 					Block zielBlock = player.getTargetBlock(null, 0);
 					aktuellerSchuss.zerstöreBlock(zielBlock);
-					player.sendMessage(" §1§s ENDE! §4§k k k §5$s Beende Plugin §4§k k k ");
+					player.sendMessage(" §1§s ENDE! §4§k k k §5§s Beende Plugin §4§k k k ");
 				}
 			}
 		}

@@ -11,28 +11,82 @@ public class Schuss {
 
 	public void zerstöreBlock(Block zielBlock) {
 		setzeBlock(zielBlock, holeZufallsMaterial());
-		setzeBlock(zielBlock.getRelative(-1, 0, 0), holeZufallsMaterial()); 	// links
-		setzeBlock(zielBlock.getRelative(1, 0, 0), holeZufallsMaterial()); 		// rechts
-		setzeBlock(zielBlock.getRelative(0, 0, 1), holeZufallsMaterial()); 		// darüber
-		setzeBlock(zielBlock.getRelative(0, 0, -1), holeZufallsMaterial());		// darunter
-		setzeBlock(zielBlock.getRelative(0, 1, 0), holeZufallsMaterial()); 		// davor
-		setzeBlock(zielBlock.getRelative(0, -1, 0), holeZufallsMaterial()); 	// dahinter
+		setzeBlock(zielBlock.getRelative(-1, 0, 0), holeZufallsMaterial()); 	
+		setzeBlock(zielBlock.getRelative(1, 0, 0), holeZufallsMaterial()); 		
+		setzeBlock(zielBlock.getRelative(0, 0, 1), holeZufallsMaterial()); 		
+		setzeBlock(zielBlock.getRelative(0, 0, -1), holeZufallsMaterial());		
+		setzeBlock(zielBlock.getRelative(0, 1, 0), holeZufallsMaterial()); 		
+		setzeBlock(zielBlock.getRelative(0, -1, 0), holeZufallsMaterial()); 	
+		setzeBlock(zielBlock.getRelative(0, -2, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, -1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-2, -1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, -1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(2, -1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, -1, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, -1, 2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, -1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, -1, -2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, -1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, -1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, -1, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, -1, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 0, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 0, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 0, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 0, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-2, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-3, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(2, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(3, 0, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, 2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, 3), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, -2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 0, -3), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(2, 0, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-2, 0, 1), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(1, 0, 2), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(-1, 0, 2), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(2, 0, -1), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(1, 0, -2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-2, 0, 1), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(-1, 0, 2), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(-1, 0, -2), holeZufallsMaterial()); 
+		setzeBlock(zielBlock.getRelative(-2, 0, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 1, 0), holeZufallsMaterial()); 		
+		setzeBlock(zielBlock.getRelative(0, 1, 0), holeZufallsMaterial()); 	
+		setzeBlock(zielBlock.getRelative(0, 2, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-2, 1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(2, 1, 0), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 1, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 1, 2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(0, 1, -2), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 1, -1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(-1, 1, 1), holeZufallsMaterial());
+		setzeBlock(zielBlock.getRelative(1, 1, 1), holeZufallsMaterial());
+
+		
+		
 		getLogger().info("Schuss abgegeben");
 	}
 	
 	private Material holeZufallsMaterial() {
 		double r = Math.random();
 		Material zielMaterial = Material.AIR;
-		if (r > 0.8)
-			zielMaterial = Material.WATER;
-		else if (r > 0.6)
-			zielMaterial = Material.FIRE;
-		
+//		if (r > 0.5)
+//			zielMaterial = Material.FIRE;		
 		return zielMaterial;
 	}
 
 	private void setzeBlock(Block block, Material material) {
-		getLogger().info("Lösche Block: " + block.toString());
+//		getLogger().info("Lösche Block: " + block.toString());
 		block.setType(material);
 	}
 

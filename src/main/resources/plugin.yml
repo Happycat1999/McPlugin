@@ -6,4 +6,6 @@ author: Gamestyler1999
 commands:
    farylizer:
       description: Gibt dem Spieler den Farylizer
+   generateCube:
+      description: erstellt eine Testfläche 
      

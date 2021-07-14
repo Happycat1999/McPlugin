@@ -10,15 +10,15 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class FarylizerPlugin extends JavaPlugin {
 
 	private FarylizerItem farylizerItem;
-	
+
 	@Override
 	public void onEnable() {
 		getLogger().info("onEnable has been invoken");
 	}
-	
+
 	@Override
-	public void onDisable() {		
-		HandlerList.unregisterAll(this.farylizerItem); 
+	public void onDisable() {
+		HandlerList.unregisterAll(this.farylizerItem);
 	}
 
 	@Override
@@ -35,8 +35,13 @@ public class FarylizerPlugin extends JavaPlugin {
 
 			// reagiere auf Ereignisse des Items
 			getServer().getPluginManager().registerEvents(farylizerItem, this);
-			
 		}
+		
+		if (cmd.getName().equalsIgnoreCase("generateCube")) {
+			Cube cube = new Cube();
+			cube.erstelleCube(player.getLocation() ,10, 10, 10);
+		}
+		
 		return true;
 	}
 
