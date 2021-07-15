@@ -8,4 +8,7 @@ commands:
       description: Gibt dem Spieler den Farylizer
    generateCube:
       description: erstellt eine Testfläche 
-     
+   sichtweite: 
+      description: holt deine sichtweite 
+   deleteWorld:
+      description: Lösche die ganze Welt 

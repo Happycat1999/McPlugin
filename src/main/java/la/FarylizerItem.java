@@ -39,6 +39,7 @@ public class FarylizerItem extends ItemStack implements Listener {
 		if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 			if (event.getHand() == EquipmentSlot.HAND) {
 				if (player.getEquipment().getItemInMainHand().getItemMeta().hasCustomModelData() && player.getEquipment().getItemInMainHand().getItemMeta().getCustomModelData() == META_NUMER) {
+					
 					Block zielBlock = player.getTargetBlock(null, 0);
 					aktuellerSchuss.zerstöreBlock(zielBlock);
 					player.sendMessage(" §1§s ENDE! §4§k k k §5§s Beende Plugin §4§k k k ");
