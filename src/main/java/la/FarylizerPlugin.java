@@ -36,10 +36,22 @@ public class FarylizerPlugin extends JavaPlugin {
 		Player player = (Player) sender;
 
 		if (cmd.getName().equalsIgnoreCase("farylizer")) {
-			// erstelle für den Spieler das neue Farylizer Item
-			this.farylizerItem = new FarylizerItem(player);
 			
-
+			boolean wirWollenLava = false;
+			boolean wirWollenWasser = false;
+			if (args.length == 1) {
+				System.out.println("Empfangene Argumente: " + args[0]);
+				if (args[0].equalsIgnoreCase("lava")) {
+					wirWollenLava = true;
+				}
+				else if (args[0].equalsIgnoreCase("wasser")) {
+					wirWollenWasser = true;
+				}
+			}			
+			
+			// erstelle für den Spieler das neue Farylizer Item
+			this.farylizerItem = new FarylizerItem(player, wirWollenLava, wirWollenWasser);
+			
 			// packe das Item in das Inventory des Spielers
 			gibCoolesItem(player, farylizerItem);
 
@@ -57,7 +69,7 @@ public class FarylizerPlugin extends JavaPlugin {
 		}
 		if (cmd.getName().equalsIgnoreCase("deleteWorld"))
 			deleteWorld();
-
+			
 		return true;
 	}
 
